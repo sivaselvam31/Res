@@ -9,7 +9,7 @@ import {
 import { Link } from "react-router-dom";
 import { GiHotMeal } from "react-icons/gi";
 import { RxHamburgerMenu, RxCross2 } from "react-icons/rx";
-import "../styles/navbar.css";
+import  "../Styles/navbar.css";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
