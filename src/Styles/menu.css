@@ -52,7 +52,7 @@
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 30px; /* More gap between cards */
-  max-width: 1300px; /* Wider grid */
+  max-width: 1400px; /* Wider grid */
   margin: 0 auto;
 }
 
