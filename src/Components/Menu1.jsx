@@ -15,8 +15,8 @@ const Menu1 = () => {
           <div className="menu1-card">
             <h3>Come and visit us</h3>
             <p>📞 (414) 867 - 0107</p>
-            <p>✉️ happytummy@restaurant.com</p>
-            <p>📍 837 W, Marshall Lane Marshalltown, IA 50158, Los Angeles</p>
+            <p>✉️ example@gmail.com</p>
+            <p>📍 Germany</p>
           </div>
         </div>
       </div>
