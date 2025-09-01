@@ -1,0 +1,223 @@
+/* ===============================
+   MENU1 SECTION STYLING
+=================================*/
+.menu1 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem; /* spacing between columns */
+  align-items: center;
+  padding: 5rem 8rem;
+  background: #fafafa;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  overflow: hidden; /* keeps animations clean */
+}
+
+/* ===============================
+   LEFT SIDE (IMAGE + CARD)
+=================================*/
+.menu1-left {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu1-image-wrapper {
+  position: relative;
+  display: inline-block;
+  opacity: 0;
+  transform: translateX(-80px);
+  animation: fadeSlideIn 1s ease forwards;
+  animation-delay: 0.3s;
+}
+
+.menu1-image {
+  width: 420px;
+  height: 420px;
+  border-radius: 16px;
+  object-fit: cover;
+  display: block;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Overlay card */
+.menu1-card {
+  position: absolute;
+  bottom: -2rem;
+  right: -5rem;
+  background: #4a5a32;
+  color: white;
+  padding: 2rem;
+  border-radius: 16px;
+  width: 300px;
+  font-size: 1.1rem;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  transform: translateY(40px);
+  animation: fadeUp 1s ease forwards;
+  animation-delay: 0.8s;
+}
+
+.menu1-card h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.menu1-card p {
+  margin: 0.6rem 0;
+  font-size: 1.05rem;
+  line-height: 1.4;
+}
+
+/* ===============================
+   RIGHT SIDE (TEXT + CTA)
+=================================*/
+.menu1-right {
+  opacity: 0;
+  transform: translateX(80px);
+  animation: fadeSlideInRight 1s ease forwards;
+  animation-delay: 0.5s;
+}
+
+.menu1-right h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  color: #222;
+  margin-bottom: 1.5rem;
+  line-height: 1.4;
+}
+
+.menu1-right h1 span {
+  color: #000;
+  font-weight: 900;
+}
+
+.menu1-right p {
+  margin-bottom: 1.5rem;
+  font-size: 1.2rem;
+  color: #444;
+  line-height: 1.8;
+}
+
+.menu1-button {
+  background: #ff4500;
+  border: none;
+  padding: 1.2rem 2.8rem;
+  font-size: 1.2rem;
+  font-weight: 700;
+  border-radius: 40px;
+  color: white;
+  cursor: pointer;
+  transition: transform 0.3s ease, background 0.3s ease;
+  margin-top: 1.5rem;
+  opacity: 0;
+  animation: fadeUp 1s ease forwards;
+  animation-delay: 1.2s;
+}
+
+.menu1-button:hover {
+  background: #e03e00;
+  transform: translateY(-4px) scale(1.05);
+}
+
+/* ===============================
+   ANIMATIONS
+=================================*/
+@keyframes fadeSlideIn {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeSlideInRight {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===============================
+   RESPONSIVE STYLES
+=================================*/
+@media (max-width: 900px) {
+  .menu1 {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    padding: 3rem 2rem;
+    text-align: center;
+    align-items: center;
+  }
+
+  .menu1-left {
+    order: 1;
+    width: 100%;
+  }
+
+  .menu1-right {
+    order: 2;
+    max-width: 700px;
+  }
+
+  .menu1-image {
+    width: 100%;
+    max-width: 360px;
+    height: auto;
+  }
+
+  .menu1-card {
+    bottom: -50px;
+    left: 50%;
+    right: auto;
+    transform: translateX(-50%);
+    width: 90%;
+    max-width: 320px;
+    font-size: 1rem;
+  }
+
+  .menu1-right h1 {
+    font-size: 2.4rem;
+    margin-top: 3rem;
+  }
+
+  .menu1-right p {
+    font-size: 1.05rem;
+  }
+
+  .menu1-button {
+    margin: 1rem auto 0 auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .menu1-right h1 {
+    font-size: 2rem;
+  }
+
+  .menu1-right p {
+    font-size: 1rem;
+  }
+  .menu1-image {
+    /* width: 100%; */
+    max-width: 300px;
+    /* height: auto; */
+  }
+  .menu1-card {
+    bottom: -85px;
+    left: 35%;
+    right: auto;
+    transform: translateX(-50%);
+    width: 80%;
+    max-width: 320px;
+    font-size: 0.5rem;
+    padding: 1.2rem;
+  }
+}

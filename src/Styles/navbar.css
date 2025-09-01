@@ -1,0 +1,203 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  width: 100%;
+  font-family: "Arial", sans-serif;
+  position: fixed; /* keep header always at the top */
+  top: 0;
+  left: 0;
+  z-index: 1000; /* sits above hero */
+}
+
+/* Top Bar */
+.top-bar {
+  background-color: #4d5a2c;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 120px;
+  font-size: 18px;
+}
+
+.top-bar .contact-info {
+  display: flex;
+  align-items: center; /* ✅ vertical alignment for phone & email */
+  gap: 25px; /* ✅ spacing between phone & email */
+}
+
+.top-bar .contact-info span {
+  display: flex;
+  align-items: center;
+  gap: 6px; /* icon + text spacing */
+}
+
+.top-bar .contact-info i {
+  margin-right: 6px;
+}
+
+/* .top-bar .social-icons {
+  display: flex;
+  gap: 15px;
+} */
+
+.top-bar .social-icons a {
+  margin-left: 12px;
+  color: white;
+  font-size: 18px;
+  text-decoration: none;
+  width: 32px;
+  height: 32px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+  transition: background 0.3s;
+}
+
+.top-bar .social-icons a:hover {
+  background: rgba(255, 255, 255, 0.4);
+}
+
+/* 🔽 Main Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 22px 120px;
+  background: rgba(255, 255, 255, 0.92); /* semi-transparent for blur effect */
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid #eee;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08); /* slight shadow */
+}
+
+/* Logo */
+.logo1 {
+  display: flex;
+  align-items: center;
+  font-size: 45px;
+  font-weight: bold;
+  color: #4d5a2c;
+}
+
+.logo1-icon {
+  font-size: 45px;
+  margin-right: 6px;
+}
+
+.logo1-text {
+  font-family: "Georgia", serif;
+  font-style: italic;
+}
+
+/* Nav Links */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 40px;
+  align-items: center;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: black;
+  font-size: 18px;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-links li a:hover {
+  color: #4d5a2c;
+}
+
+/* CTA Button */
+.buy-btn {
+  border: 1px solid black;
+  background: none;
+  padding: 10px 22px;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 15px;
+  transition: all 0.3s ease;
+}
+
+.buy-btn:hover {
+  background: #4d5a2c;
+  color: white;
+}
+
+/* 🔽 Hamburger Menu (hidden on desktop) */
+.hamburger {
+  display: none;
+  font-size: 30px;
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+
+/* Mobile View */
+@media (max-width: 768px) {
+  .top-bar {
+    padding: 8px 15px;
+    font-size: 14px;
+    display: flex;
+    justify-content: space-between; /* phone left, email right */
+    align-items: center;
+  }
+
+  /* Hide social icons on mobile */
+  .top-bar .social-icons {
+    display: none;
+  }
+
+  .top-bar .contact-info {
+    width: 100%;
+    display: flex;
+    justify-content: space-between; /* phone left, email right */
+  }
+
+  .navbar {
+    padding: 15px 20px;
+  }
+
+  /* Hide nav links & button initially */
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background: white;
+    position: absolute;
+    top: 100%; /* below navbar */
+    left: 0;
+    width: 100%;
+    padding: 20px;
+    border-top: 1px solid #eee;
+    z-index: 999;
+  }
+
+  /* When active class added (JS toggle) */
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-links li {
+    margin: 15px 0;
+  }
+
+  .buy-btn {
+    align-self: flex-start;
+  }
+
+  /* Hamburger button */
+  .hamburger {
+    display: block;
+    font-size: 26px;
+    cursor: pointer;
+  }
+}
