@@ -2,11 +2,11 @@ import React from "react";
 import "../Styles/blog.css";
 
 // import local images
-import blog1 from "../images/blog1.avif";
-import blog2 from "../images/blog2.avif";
-import blog3 from "../images/blog3.avif";
-import blog4 from "../images/blog4.avif";
-import blog5 from "../images/blog5.avif";
+import blog1 from "../../public/images/blog1.avif";
+import blog2 from "../../public/images/blog2.avif";
+import blog3 from "../../public/images/blog3.avif";
+import blog4 from "../../public/images/blog4.avif";
+import blog5 from "../../public/images/blog5.avif";
 
 const blogs = [
   {

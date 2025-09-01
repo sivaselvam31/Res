@@ -1,10 +1,10 @@
 import React from "react";
 import "../Styles/footer.css";
 
-import img1 from "../images/footer1.avif";
-import img2 from "../images/footer2.avif";
-import img3 from "../images/footer3.avif";
-import img4 from "../images/footer4.avif";
+import img1 from "../../public/images/footer1.avif";
+import img2 from "../../public/images/footer2.avif";
+import img3 from "../../public/images/footer3.avif";
+import img4 from "../../public/images/footer4.avif";
 
 export default function Footer() {
   return (

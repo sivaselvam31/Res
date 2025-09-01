@@ -1,9 +1,9 @@
 import React from "react";
 import "../Styles/delivery.css";
 
-import chefImg from "../images/chef1.avif";
-import chickenImg from "../images/chef2.avif";
-import partyImg from "../images/chef3.avif";
+import chefImg from "../../public/images/chef1.avif";
+import chickenImg from "../../public/images/chef2.avif";
+import partyImg from "../../public/images/chef3.avif";
 
 const DeliverySection = () => {
   return (

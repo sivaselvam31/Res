@@ -20,7 +20,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: url("../images/hero.avif") no-repeat center center;
+  background: url("../../public/images/hero.avif") no-repeat center center;
   background-size: cover;
   transform: scale(1);
   transition: transform 1.8s ease-out; /* smoother zoom */

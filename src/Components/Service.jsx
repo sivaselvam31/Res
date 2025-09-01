@@ -1,10 +1,10 @@
 import React from "react";
 import "../Styles/service.css";
 
-import cateringImg from "../images/catering1.avif";
-import birthdayImg from "../images/catering2.avif";
-import weddingImg from "../images/catering3.avif";
-import eventImg from "../images/catering4.avif";
+import birthdayImg from "../../public/images/catering2.avif";
+import cateringImg from "../../public/images/catering1.avif";
+import weddingImg from "../../public/images/catering3.avif";
+import eventImg from "../../public/images/catering4.avif";
 
 const Services = () => {
   const services = [

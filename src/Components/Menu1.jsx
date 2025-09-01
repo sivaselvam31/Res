@@ -1,6 +1,6 @@
 import React from "react";
 import "../Styles/menu1.css";
-import menu1Img from "../images/menu1.avif";
+import menu1Img from "../../public/images/menu1.avif";
 import useScrollAnimation from "./UseScrollAnimations";
 
 const Menu1 = () => {
